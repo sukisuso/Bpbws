@@ -57,5 +57,28 @@ app.controller("appController", function appController($scope, $timeout){
 	}
 });
 
-
+app.directive('bsWizzard', function() {
+  return {
+    template: '<div class="container">\
+				<div class="row bs-wizard" style="border-bottom:0;">\
+					<div class="{{progress.stp1}}">\
+					<div class="text-center bs-wizard-stepnum">{{progress.stp1text}}</div>\
+					<a href="#" class="bs-wizard-dot"></a>\
+					</div>\
+					<div class="{{progress.stp2}}">\
+					<div class="text-center bs-wizard-stepnum">{{progress.stp2text}}</div>\
+					<a href="#" class="bs-wizard-dot"></a>\
+					</div>\
+					<div class="{{progress.stp3}}">\
+					<div class="text-center bs-wizard-stepnum">{{progress.stp3text}}</div>\
+					<a href="#" class="bs-wizard-dot"></a>\
+					</div>\
+					<div class="{{progress.stp4}}">\
+					<div class="text-center bs-wizard-stepnum">{{progress.stp4text}}</div>\
+					<a href="#" class="bs-wizard-dot"></a>\
+					</div>\
+				</div>\
+			</div>'
+  };
+});
 
